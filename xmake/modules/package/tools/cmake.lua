@@ -1234,6 +1234,7 @@ function configure(package, configs, opt)
 
     -- do configure
     local cmake = assert(find_tool("cmake"), "cmake not found!")
+    print(argv)
     os.vrunv(cmake.program, argv, {envs = opt.envs or buildenvs(package, opt)})
     os.cd(oldir)
 end
